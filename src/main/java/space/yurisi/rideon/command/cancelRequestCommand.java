@@ -40,6 +40,7 @@ public class cancelRequestCommand extends RideOnRequestCommandManager {
 
         main.removeRequest(player.getUniqueId());
         player.sendMessage(getSuccessMessage("§b" + targetPlayer.getName() + "§2さんへの騎乗依頼をキャンセルしました。"));
+        targetPlayer.sendMessage(getErrorMessage("§b" + player.getName() + "§4さんが騎乗依頼をキャンセルしました。"));
 
         return true;
     }

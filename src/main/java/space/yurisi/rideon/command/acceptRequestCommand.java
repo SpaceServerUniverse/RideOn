@@ -45,8 +45,8 @@ public class acceptRequestCommand extends RideOnRequestCommandManager {
         }
 
         // 距離が20ブロック以内かどうか
-        if(senderPlayer.getLocation().distance(player.getLocation()) > 20){
-            player.sendMessage(getErrorMessage("乗りたいプレイヤーに近づいてください。"));
+        if(senderPlayer.getLocation().distance(player.getLocation()) > 5){
+            player.sendMessage(getErrorMessage("乗りたいプレイヤーにもっと近づいてください。"));
             return false;
         }
 
