@@ -56,8 +56,8 @@ public class acceptRequestCommand extends RideOnRequestCommandManager {
 
         player.addPassenger(senderPlayer);
         main.removeRequest(senderUUID);
-        player.sendMessage(getSuccessMessage("§b" + player.getName() + "§2さんに乗りました。"));
-        senderPlayer.sendMessage(getSuccessMessage("§b" + senderPlayer.getName() + "§2さんを乗せました。"));
+        senderPlayer.sendMessage(getSuccessMessage("§b" + player.getName() + "§2さんに乗りました。"));
+        player.sendMessage(getSuccessMessage("§b" + senderPlayer.getName() + "§2さんを乗せました。"));
 
         return true;
     }
