@@ -1,0 +1,40 @@
+name: RideOn
+version: '${version}'
+main: space.yurisi.rideon.RideOn
+api-version: '1.20'
+commands:
+  ride:
+    description: 騎乗依頼を送信します。
+    permission: space.yurisi.rideon.ride
+    usage: /ride <player>
+  rideok:
+    description: 騎乗依頼を承認します。
+    permission: space.yurisi.rideon.rideok
+    usage: /rideok
+  rideno:
+    description: 騎乗依頼を拒否します。
+    permission: space.yurisi.rideon.rideno
+    usage: /rideno
+  ridecancel:
+    description: 騎乗依頼をキャンセルします。
+    permission: space.yurisi.rideon.ridecancel
+    usage: /ridecancel
+
+  RideReqClear:
+    description: 騎乗依頼を全て削除します。
+    permission: space.yurisi.rideon.RideReqClear
+    usage: /RideReqClear
+
+permissions:
+  space.yurisi.rideon.*:
+    description: default
+    default: true
+    children:
+      space.yurisi.rideon.ride: true
+      space.yurisi.rideon.rideok: true
+      space.yurisi.rideon.rideno: true
+      space.yurisi.rideon.ridecancel: true
+
+  space.yurisi.rideon.RideReqClear:
+    description: op command
+    default: op
